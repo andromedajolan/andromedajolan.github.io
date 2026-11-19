@@ -16,11 +16,17 @@
     var t = localStorage.getItem('studio.theme');
     if (t === 'dark' || t === 'gray' || t === 'light') document.documentElement.dataset.theme = t;
   } catch (e) {}
-  try { if (sessionStorage.getItem('ianua.splashSeen')) document.documentElement.classList.add('nosplash'); } catch (e) {}
+  try { document.documentElement.classList.add(sessionStorage.getItem('ianua.splashSeen') ? 'nosplash' : 'intro'); } catch (e) { document.documentElement.classList.add('intro'); }
 </script>
 </head>
 <body>
-<div id="splash" aria-hidden="true"><img src="img/splash.webp" alt="" width="1080" height="1920"></div>
+<div id="splash" aria-hidden="true">
+  <div class="stage">
+    <div class="room"><img src="img/splash.webp" alt="" width="1080" height="1920"></div>
+    <div class="slit"></div>
+    <div class="mark"><b>ABDITUM</b><i>a hidden place</i></div>
+  </div>
+</div>
 <div class="door" aria-hidden="true"></div>
 <main>
   <header class="top">
@@ -39,8 +45,15 @@
     <h2>Side tool</h2>
     <ul id="side" class="cards side-cards" aria-label="Side tools"></ul>
   </section>
-  <p id="msg" class="msg" hidden></p>
-  <footer>Ianua <span id="ver"></span> · keys: arrows to move, Enter to open, 1–5 for apps</footer>
+  <p id="msg" class="msg" role="status" hidden></p>
+  <footer>
+    <span>Ianua <span id="ver"></span> · arrows to move, Enter to open, 1–5 for apps</span>
+    <span class="settings">
+      <button id="btn-export" class="link">Export settings</button>
+      <button id="btn-import" class="link">Import settings</button>
+      <input id="file-import" type="file" accept="application/json,.json" hidden>
+    </span>
+  </footer>
 </main>
 <script src="app.js"></script>
 </body>

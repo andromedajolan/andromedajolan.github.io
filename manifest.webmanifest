@@ -1,0 +1,16 @@
+{
+  "name": "Ianua",
+  "short_name": "Ianua",
+  "description": "Ianua: the front door of the Abditum studio suite.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050403",
+  "theme_color": "#050403",
+  "icons": [
+    { "src": "icons/ianua-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/ianua-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/ianua-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

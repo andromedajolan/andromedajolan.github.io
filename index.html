@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ianua · Abditum</title>
+<meta name="description" content="Ianua: the front door of the Abditum studio suite.">
+<meta name="theme-color" content="#050403">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/ianua-96.png">
+<link rel="apple-touch-icon" href="icons/ianua-192.png">
+<link rel="stylesheet" href="app.css">
+<script>
+  // Shared suite theme (same values as the DAW and Lyric Writer) and once-per-session splash, applied before first paint.
+  try {
+    var t = localStorage.getItem('studio.theme');
+    if (t === 'dark' || t === 'gray' || t === 'light') document.documentElement.dataset.theme = t;
+  } catch (e) {}
+  try { if (sessionStorage.getItem('ianua.splashSeen')) document.documentElement.classList.add('nosplash'); } catch (e) {}
+</script>
+</head>
+<body>
+<div id="splash" aria-hidden="true"><img src="img/splash.webp" alt="" width="1080" height="1920"></div>
+<div class="door" aria-hidden="true"></div>
+<main>
+  <header class="top">
+    <div class="word">
+      <h1>ABDITUM</h1>
+      <p>a hidden place</p>
+    </div>
+    <div class="tools">
+      <button id="btn-install" class="btn" hidden>Install Ianua</button>
+      <button id="btn-theme" class="btn" title="Switch theme" aria-label="Switch theme">Dark</button>
+    </div>
+  </header>
+  <section id="strip" class="strip" hidden></section>
+  <ul id="cards" class="cards" aria-label="Apps"></ul>
+  <section class="side">
+    <h2>Side tool</h2>
+    <ul id="side" class="cards side-cards" aria-label="Side tools"></ul>
+  </section>
+  <p id="msg" class="msg" hidden></p>
+  <footer>Ianua <span id="ver"></span> · keys: arrows to move, Enter to open, 1–5 for apps</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "apps": [
     {
       "id": "stilus",
@@ -68,11 +68,11 @@
       "description": "Plan and track your releases.",
       "repo": "annales",
       "path": "/annales/",
-      "status": "soon",
+      "status": "live",
       "accent": "#fc8aaf",
       "icon": "icons/annales-96.png",
       "icon192": "icons/annales-192.png",
-      "summaryKey": null
+      "summaryKey": "annales.summary"
     },
     {
       "id": "notula",

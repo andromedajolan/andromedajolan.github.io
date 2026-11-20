@@ -1,6 +1,6 @@
 // Ianua service worker. Serves ONLY Ianua's own listed files; every other request is left alone.
 // Never touches another app's worker or cache, and never wipes site data.
-const VERSION = '1.1.0'; // keep in sync with APP_VERSION in app.js
+const VERSION = '1.2.0'; // keep in sync with APP_VERSION in app.js
 const PREFIX = 'ianua-cache-';
 const CACHE = PREFIX + VERSION;
 const ASSETS = [

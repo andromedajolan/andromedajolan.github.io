@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.2.0",
+  "version": "1.3.0",
   "apps": [
     {
       "id": "stilus",
@@ -83,11 +83,11 @@
       "description": "Sheet music and tab.",
       "repo": "notula",
       "path": "/notula/",
-      "status": "soon",
+      "status": "live",
       "accent": "#43e879",
       "icon": "icons/notula-96.png",
       "icon192": "icons/notula-192.png",
-      "summaryKey": null
+      "summaryKey": "notula.summary"
     }
   ]
 }

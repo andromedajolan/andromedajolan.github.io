@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const APP_VERSION = '1.2.0'; // keep in sync with VERSION in sw.js
+  const APP_VERSION = '1.3.0'; // keep in sync with VERSION in sw.js
   const KEY_THEME = 'studio.theme'; // shared suite key; the only non-ianua key this app writes
   const KEY_LAST = 'ianua.last';       // {id, at}: last app opened from here
   const KEY_SEEN = 'ianua.seen';       // {appId: version}: version last seen when opened from here
